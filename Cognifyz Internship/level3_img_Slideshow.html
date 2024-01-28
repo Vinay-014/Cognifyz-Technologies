@@ -1,0 +1,113 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lvl3task2.css">
+    <style>
+        </style>
+    <title>Space Programs</title>
+</head>
+<body>
+<section class="container">
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img id="slide-1" src="4-Sputnik-1-mission.webp" alt="">
+            <img id="slide-2" src="vostok1.jpg" alt="">
+            <img id="slide-3" src="apollo11.jpg" alt="">
+            <img id="slide-4" src="venera.jpeg" alt="">
+            <img id="slide-6" src="Voyager-Fig-1.jpg" alt="">
+            <img id="slide-7" src="Partes-principales-de-la-Pioneer-10-extraido-de-http-wwwdaviddarling_Q320.jpg" alt="">
+            <img id="slide-8" src="NHHopkinsPoster_letterSizenewhorz.png" alt="">
+            <img id="slide-9" src="mangalyaan.jpg" alt="">
+            <img id="slide-10" src="C3.avif" alt="">
+            <img id="slide-11" src="Mars missions.jpg" alt="">
+
+
+
+
+
+
+        </div>
+        <div class="slider-nav">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+            <a href="#slide-5"></a>
+            <a href="#slide-6"></a>
+            <a href="#slide-7"></a>
+            <a href="#slide-8"></a>
+            <a href="#slide-9"></a>
+            <a href="#slide-10"></a>
+            <a href="#slide-11"></a>
+        </div>
+        
+    </div>
+</section>
+
+
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="level3_img_Slidshow.css">
+    <style>
+    </style>
+    <title>Space Programs</title>
+</head>
+<body>
+    <h2>POPULAR SPACE LAUNCHES OVER THE DECADES</h2>
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="4-Sputnik-1-mission.webp" alt="">
+                <img id="slide-2" src="vostok1.jpg" alt="">
+                <img id="slide-3" src="apollo11.jpg" alt="">
+                <img id="slide-4" src="venera.jpeg" alt="">
+                <img id="slide-6" src="Voyager-Fig-1.jpg" alt="">
+                <img id="slide-7" src="Partes-principales-de-la-Pioneer-10-extraido-de-http-wwwdaviddarling_Q320.jpg" alt="">
+                <img id="slide-8" src="NHHopkinsPoster_letterSizenewhorz.png" alt="">
+                <img id="slide-9" src="mangalyaan.jpg" alt="">
+                <img id="slide-10" src="C3.avif" alt="">
+                <img id="slide-11" src="Mars missions.jpg" alt="">
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+                <a href="#slide-5"></a>
+                <a href="#slide-6"></a>
+                <a href="#slide-7"></a>0
+                <a href="#slide-8"></a>
+                <a href="#slide-9"></a>
+                <a href="#slide-10"></a>
+                <a href="#slide-11"></a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 11; 
+        const intervalTime = 2000; 
+
+        function showSlide() {
+            document.querySelector('.slider').style.transform = `translateX(${-100 * (currentSlide - 1)}%)`;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide % totalSlides) + 1;
+            showSlide();
+        }
+
+        setInterval(nextSlide, intervalTime);
+    </script>
+</body>
+</html>
+

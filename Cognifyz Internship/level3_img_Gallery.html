@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="level3_img_Gallery.css">
+    <style>
+        </style>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h2>TOUCH THE SKY WITH GLORY</h2>
+
+    <div class="gallery">
+        <img class="thumbnail" src="left.jpg"  alt="Image 1" onclick="openModal('left.jpg')">
+        <img class="thumbnail" src="iaf759.webp" alt="Image 2" onclick="openModal('iaf759.webp')">
+        <img class="thumbnail" src="iaf logo.jpg" alt="Image 3" onclick="openModal('iaf logo.jpg')">
+        <img class="thumbnail" src="iaf_women.avif" alt="Image 4" onclick="openModal('iaf_women.avif')">
+        <img class="thumbnail" src="38cc3727d710fdd794df1a0ad9a04d4e.jpg" alt="Image 5" onclick="openModal('38cc3727d710fdd794df1a0ad9a04d4e.jpg')">
+        
+    </div>
+    
+
+<div class="modal" id="myModal">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <img src="" alt="Enlarged Image" id="modalImage">
+</div>
+
+<script>
+    function openModal(imageSrc) {
+        var modal = document.getElementById('myModal');
+        var modalImage = document.getElementById('modalImage');
+
+        modal.style.display = 'flex';
+        modalImage.src = imageSrc;
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

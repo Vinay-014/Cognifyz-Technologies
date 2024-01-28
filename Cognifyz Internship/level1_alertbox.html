@@ -1,0 +1,68 @@
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Based on Time</title>
+</head>
+<body>
+
+<script>
+    // Gets the current time
+    var currentTime = new Date();
+    var currentHour = currentTime.getHours();
+
+    // Defines the greeting based on the current time
+    var greeting;
+    if (currentHour < 12) {
+        greeting = "Good morning!";
+    } else if (currentHour < 18) {
+        greeting = "Good afternoon!";
+    } else {
+        greeting = "Good evening!";
+    }
+
+    // Display the greeting in an alert box
+    alert(greeting);
+</script>
+
+</body>
+</html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Based on Time</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+
+<script>
+    // Sets the time zone to Indian Standard Time
+    var timeZone = "Asia/Kolkata";
+
+    // Gets the current time with the specified time zone
+    var currentTime = moment().tz(timeZone).format('HH:mm');
+
+    // Extracts the hour from the time string
+    var currentHour = parseInt(currentTime.split(":")[0]);
+
+    // Defines the greeting based on the current time
+    var greeting;
+    if (currentHour < 12) {
+        greeting = "Good morning!";
+    } else if (currentHour < 16) {
+        greeting = "Good afternoon!";
+    } else {
+        greeting = "Good evening!";
+    }
+
+    // Display the greeting in an alert box
+    alert(greeting);
+</script>
+
+</body>
+</html>
